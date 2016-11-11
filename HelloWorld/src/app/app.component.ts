@@ -3,13 +3,16 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-
+import { ItensPage } from '../pages/itens/itens';
 
 @Component({
-  template: `<ion-nav [root]="rootPage"></ion-nav>`
+  templateUrl:'app.html'
 })
 export class MyApp {
-  rootPage = HomePage;
+  home = HomePage;
+  itens = ItensPage;
+
+  root = this.home;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
@@ -18,5 +21,9 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+  }
+
+  goToPage(page) {
+    this.root = page;
   }
 }
