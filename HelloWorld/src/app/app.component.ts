@@ -3,16 +3,18 @@ import { Platform } from 'ionic-angular';
 import { StatusBar, Splashscreen } from 'ionic-native';
 
 import { HomePage } from '../pages/home/home';
-import { ItensPage } from '../pages/itens/itens';
+import { AboutPage } from '../pages/about/about';
+import { LoginPage } from '../pages/login/login';
 
 @Component({
   templateUrl:'app.html'
 })
 export class MyApp {
   home = HomePage;
-  itens = ItensPage;
+  about = AboutPage;
+  login = LoginPage;
 
-  root = this.home;
+  root = this.login;
 
   constructor(platform: Platform) {
     platform.ready().then(() => {
