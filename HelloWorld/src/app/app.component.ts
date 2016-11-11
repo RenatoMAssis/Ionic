@@ -10,8 +10,7 @@ import { LoginPage } from '../pages/login/login';
   templateUrl:'app.html'
 })
 export class MyApp {
-  home = HomePage;
-  about = AboutPage;
+  pages: Array<{title: string, component: any}>;
   login = LoginPage;
 
   root = this.login;
@@ -23,9 +22,16 @@ export class MyApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
     });
+
+    // set our app's pages
+    this.pages = [
+      { title: 'Home', component: HomePage },
+      { title: 'About', component: AboutPage }
+    ];
   }
 
-  goToPage(page) {
-    this.root = page;
+  openPage(page) {
+    // navigate to the new page if it is not the current page
+      this.root = page.component;
   }
 }

@@ -11,21 +11,16 @@
 </ion-header>
 
 <ion-content padding>
-
-  <button ion-button icon-left block>
-    <ion-icon name="unlock"></ion-icon>
-      Door Bedroom
-  </button>
-
-  <button ion-button icon-left block>
-    <ion-icon name="sunny"></ion-icon>
-      Lights
-  </button>
-
-  <button ion-button icon-left block>
-    <ion-icon name="power"></ion-icon>
-      TV
-  </button>
+  <ion-grid>
+    <ion-row>
+      <ion-col width-33 *ngFor="let i of itens">
+        <button ion-button icon-left block>
+          <ion-icon name="{{i.icon}}"></ion-icon>
+          {{i.title}}
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
 
 
