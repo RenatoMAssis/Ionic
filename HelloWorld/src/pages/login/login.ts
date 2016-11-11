@@ -16,7 +16,7 @@ export class LoginPage {
 
   onSubmit(formData) {
     if(formData.valid) {
-      if(this.email == "renato@gmail.com" && this.password == "renato") {
+      if(this.email.toUpperCase().trim() == "renato@gmail.com".toUpperCase() && this.password == "renato") {
           this.navCtrl.setRoot(HomePage);
       }
 
