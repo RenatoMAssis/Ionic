@@ -7,7 +7,7 @@
 </ion-header>
 <ion-content>
   <ion-list inset>
-    <form #myForm='ngForm' (ngSubmit)="onSubmit(myForm)">
+    <form #myForm='ngForm'>
       <ion-item>
         <ion-label floating>Email</ion-label>
         <ion-input type="text" [(ngModel)]="email" name="email"></ion-input>
@@ -17,7 +17,7 @@
         <ion-input type="password" [(ngModel)]="password" name="password"></ion-input>
       </ion-item>
       <div padding>
-        <button ion-button block>Sign In</button>
+        <button ion-button block (click)="onSubmit()">Sign In</button>
       </div>
     </form>
   </ion-list>

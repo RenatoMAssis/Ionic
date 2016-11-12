@@ -5,6 +5,7 @@ import { HomePage } from '../pages/home/home';
 import { ItensPage } from '../pages/itens/itens';
 import { AboutPage } from '../pages/about/about';
 import { LoginPage } from '../pages/login/login';
+import { BaseController } from '../pages/base/base';
 
 @NgModule({
   declarations: [
@@ -12,7 +13,8 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
     ItensPage,
     AboutPage,
-    LoginPage
+    LoginPage,
+    BaseController
   ],
   imports: [
     IonicModule.forRoot(MyApp)
@@ -23,7 +25,8 @@ import { LoginPage } from '../pages/login/login';
     HomePage,
     ItensPage,
     AboutPage,
-    LoginPage
+    LoginPage,
+    BaseController
   ],
   providers: []
 })
