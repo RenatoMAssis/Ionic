@@ -14,7 +14,7 @@
   <ion-grid>
     <ion-row>
       <ion-col width-33 *ngFor="let i of itens">
-        <button ion-button icon-left block>
+        <button ion-button icon-left block (click)="goToPage(i.component)">
           <ion-icon name="{{i.icon}}"></ion-icon>
           {{i.title}}
         </button>
